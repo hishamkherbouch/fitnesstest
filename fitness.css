@@ -1,0 +1,58 @@
+.H1{
+    font-size: 5em;
+    text-align: center;
+    color:ghostwhite;
+    background-color: cornflowerblue;
+}
+#fitnessLink{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: blue;
+    font-size: 1em;
+}
+#nutritionLink{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: blue;
+    font-size: 1em;
+}
+#fitnessP{
+    font-size: 3.5em;
+}
+.fitnessLabel{
+    font-size: 1.25em;
+}
+.fitnessDropdown{
+    font-size: 1em;
+}
+#backLink{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: blue;
+    font-size: 1em;  
+}
+#fitnessLink2{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: blue;
+    font-size: 1em; 
+}
+#fitnesslink{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: blue;
+    font-size: 1em;
+}
+.exercise-name {
+    font-size: 18px; /* Change this value to adjust the size of the exercise name */
+}
+
+.exercise-instructions {
+    font-size: 14px; /* Change this value to adjust the size of the exercise instructions */
+}
