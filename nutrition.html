@@ -3,52 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDEE Calculator</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Nutrition</title>
+    <link rel="stylesheet" href="fitness.css">
+    <link rel="stylesheet" href="resets.css">
+    <link rel="icon" href="barbell.png" type="image/png" />
 </head>
 <body>
-    <h1>Recomended Daily Caloric Intake</h1>
-    <form id="calorieForm">
-        <label for="height">Height:</label>
-        <input type="number" id="height" required>
-        <select id="heightUnit">
-        <option value="cm">cm</option>
-        <option value="inches">inches</option>
-        </select><br><br>
+    <header style="
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+    gap: 10px;">
 
-<label for="weight">Weight:</label>
-<input type="number" id="weight" required>
-<select id="weightUnit">
-    <option value="kg">kg</option>
-    <option value="lbs">lbs</option>
-</select><br><br>
+    <!-- Left Buttons -->
+    <div style="
+        display: flex;
+        gap: 10px;
+        align-items: center;">
+        <a href="index.html" class="buttonlink" id="homeButton" style="text-decoration: none;">
+            <button style="
+                padding: 10px 15px;
+                font-size: 1rem;
+                border: 2px solid black;
+                background-color: rgb(74, 74, 206);
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;" >
+                Home
+            </button>
+        </a>
 
-        
-        <label for="gender">Gender:</label>
-        <select id="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select><br><br>
-        
-        <label for="workoutFrequency">Workout Frequency:</label>
-        <select id="workoutFrequency" required>
-            <option value="sedentary">Sedentary (little to no exercise)</option>
-            <option value="lightlyActive">Lightly Active (exercise 1-3 days per week)</option>
-            <option value="moderatelyActive">Moderately Active (exercise 3-5 days per week)</option>
-            <option value="veryActive">Very Active (exercise 6-7 days per week)</option>
-            <option value="extraActive">Extra Active (very hard exercise, physical job, or training twice a day)</option>
-        </select><br><br>
-        
-        <button type="submit">Calculate TDEE</button>
-    </form>
+        <a href="fitnesspage.html" class="buttonlink" id="fitButton" style="text-decoration: none;">
+            <button style="
+                padding: 10px 15px;
+                font-size: 1rem;
+                border: 2px solid black;
+                background-color: rgb(74, 74, 206);
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;">
+                Fitness
+            </button>
+        </a>
+    </div>
+
+    <!-- Centered Title -->
+    <h1 class="H1" style="
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 4em;">
+        Nutrition
+    </h1>
+
+    <!-- Right Button -->
+    <div style="
+        display: flex;
+        gap: 10px;
+        align-items: center;">
+        <button  id="button1" style="
+        padding: 10px 15px;
+        font-size: 1rem;
+        border: 2px solid black;
+        background-color: rgb(74, 74, 206);
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;" class="buttonlink" >
+            Toggle Dark Mode
+        </button>
+    </div>
+</header>
+
+
+    <h1 style="font-size: 4em;">Recommended Daily Caloric Intake</h1>
     
+    <form id="calorieForm" style="max-width: fit-content; margin: 0 auto; max-height: fit-content; font-size: 3em;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 2em; ">
+            <label for="height" style="width: 35%;">Height:</label>
+            <input type="number" id="height" required style="width: 60%; padding: 5px; font-size: 0.5em;">
+            <select id="heightUnit" style="width: 30%; margin-left: 5px; font-size: 0.5em;">
+                <option value="inches" style="font-size: 0.5em;">Inches</option>
+                <option value="cm" style="font-size: 0.5em;">Cm</option>
+            </select>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 2em">
+            <label for="weight" style="width: 35%;">Weight:</label>
+            <input type="number" id="weight" required style="width: 60%; padding: 5px; font-size: 0.5em;">
+            <select id="weightUnit" style="width: 30%; margin-left: 5px; font-size: 0.5em;">
+                <option value="lbs" style="font-size: 0.5em;">Lbs</option>
+                <option value="kg" style="font-size: 0.5em;">Kg</option>
+            </select>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 2em;">
+            <label for="gender" style="width: 35%;">Gender:</label>
+            <select id="gender" required style="width: 60%; padding: 5px; font-size: 0.5em;">
+                <option value="male" style="font-size: 0.5em;">Male</option>
+                <option value="female" style="font-size: 0.5em;">Female</option>
+            </select>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 2em;">
+            <label for="workoutFrequency">Workout Frequency:</label>
+            <select id="workoutFrequency" required style="width: 100%; padding: 5px; font-size: 0.5em">
+                <option value="sedentary" style="font-size: 0.5em;">Sedentary (little to no exercise)</option>
+                <option value="lightlyActive" style="font-size: 0.5em;">Lightly Active (1-3 days per week)</option>
+                <option value="moderatelyActive" style="font-size: 0.5em;">Moderately Active (3-5 days per week)</option>
+                <option value="veryActive" style="font-size: 0.5em;">Very Active (6-7 days per week)</option>
+                <option value="extraActive" style="font-size: 0.5em;">Extra Active (physical job or training twice a day)</option>
+            </select>
+        </div>
+
+        <button class="buttonlink" type="submit" style="
+            width: 100%;
+            height: 40%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid black;
+            background-color: rgb(74, 74, 206);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        ">
+            Calculate TDEE
+        </button>
+    </form>
+
     <div id="result"></div>
 
     <canvas id="macronutrientChart" width="400" height="400"></canvas>
 
+    
+
     <script src="tdeeCalculator.js"></script>
-    <a href="fitness.html" id="backLink">Home</a>
-    <a href="fitnessPage.html" id="fitnessLink">Exercise recommendations</a>
+    <script src="fitness.js"></script>
 </body>
 </html>
-

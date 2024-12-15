@@ -1,60 +1,51 @@
+// Function to generate a three-day workout routine using local exercise data
 function generateThreeDayRoutine(container) {
-    fetchExercises('chest').then(function(chestExercises) {
-        fetchExercises('middle back').then(function(middleBackExercises) {
-            fetchExercises('biceps').then(function(bicepsExercises) {
-                fetchExercises('hamstrings').then(function(hamstringsExercises) {
-                    fetchExercises('abdominals').then(function(abdominalsExercises) {
-                        container.append('<h2>Day 1: Full Body</h2>');
-                        renderExercise(container, 'Chest Exercise: ' + getRandomExercise(chestExercises));
-                        renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
-                        renderExercise(container, 'Biceps Exercise: ' + getRandomExercise(bicepsExercises));
-                        renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
-                        renderExercise(container, 'Abdominals Exercise: ' + getRandomExercise(abdominalsExercises));
-                    });
-                });
-            });
-        });
-    });
+    // Day 1: Full Body Routine
+    const chestExercises = getExercises('chest');
+    const middleBackExercises = getExercises('middle_back');
+    const bicepsExercises = getExercises('biceps');
+    const hamstringsExercises = getExercises('hamstrings');
+    const abdominalsExercises = getExercises('abdominals');
 
-    fetchExercises('chest').then(function(chestExercises) {
-        fetchExercises('middle back').then(function(middleBackExercises) {
-            fetchExercises('triceps').then(function(tricepsExercises) {
-                fetchExercises('quadriceps').then(function(quadricepsExercises) {
-                    fetchExercises('calves').then(function(calvesExercises) {
-                        container.append('<h2>Day 2: Full Body</h2>');
-                        renderExercise(container, 'Chest Exercise: ' + getRandomExercise(chestExercises));
-                        renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
-                        renderExercise(container, 'Triceps Exercise: ' + getRandomExercise(tricepsExercises));
-                        renderExercise(container, 'Quadriceps Exercise: ' + getRandomExercise(quadricepsExercises));
-                        renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
-                    });
-                });
-            });
-        });
-    });
+    container.append('<h2>Day 1: Full Body</h2>');
+    renderExercise(container, 'Chest Exercise: ' + getRandomExercise(chestExercises));
+    renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
+    renderExercise(container, 'Biceps Exercise: ' + getRandomExercise(bicepsExercises));
+    renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
+    renderExercise(container, 'Abdominals Exercise: ' + getRandomExercise(abdominalsExercises));
 
-    fetchExercises('chest').then(function(chestExercises) {
-        fetchExercises('lats').then(function(latsExercises) {
-            fetchExercises('glutes').then(function(glutesExercises) {
-                fetchExercises('forearm').then(function(forearmExercises) {
-                    fetchExercises('traps').then(function(trapsExercises) {
-                        container.append('<h2>Day 3: Full Body</h2>');
-                        renderExercise(container, 'Chest Exercise: ' + getRandomExercise(chestExercises));
-                        renderExercise(container, 'Lats Exercise: ' + getRandomExercise(latsExercises));
-                        renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
-                        renderExercise(container, 'Forearm Exercise: ' + getRandomExercise(forearmExercises));
-                        renderExercise(container, 'Traps Exercise: ' + getRandomExercise(trapsExercises));
-                    });
-                });
-            });
-        });
-    });
+    // Day 2: Full Body Routine
+    const tricepsExercises = getExercises('triceps');
+    const quadricepsExercises = getExercises('quadriceps');
+    const calvesExercises = getExercises('calves');
+
+    container.append('<h2>Day 2: Full Body</h2>');
+    renderExercise(container, 'Chest Exercise: ' + getRandomExercise(chestExercises));
+    renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
+    renderExercise(container, 'Triceps Exercise: ' + getRandomExercise(tricepsExercises));
+    renderExercise(container, 'Quadriceps Exercise: ' + getRandomExercise(quadricepsExercises));
+    renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
+
+    // Day 3: Full Body Routine
+    const latsExercises = getExercises('lats');
+    const glutesExercises = getExercises('glutes');
+    const forearmExercises = getExercises('forearms');
+    const trapsExercises = getExercises('traps');
+
+    container.append('<h2>Day 3: Full Body</h2>');
+    renderExercise(container, 'Chest Exercise: ' + getRandomExercise(chestExercises));
+    renderExercise(container, 'Lats Exercise: ' + getRandomExercise(latsExercises));
+    renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
+    renderExercise(container, 'Forearm Exercise: ' + getRandomExercise(forearmExercises));
+    renderExercise(container, 'Traps Exercise: ' + getRandomExercise(trapsExercises));
 }
 
-function fetchExercises(muscle) {
-    var apiUrl = 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle;
-    return fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => data.map(exercise => exercise.name))
-        .catch(error => console.error('Error fetching exercises:', error));
+// Helper function to get exercises for a specific muscle from the local data
+function getExercises(muscle) {
+    return exerciseData[muscle] ? exerciseData[muscle].map(exercise => exercise.name) : [];
+}
+
+// Helper function to get a random exercise from a list of exercises
+function getRandomExercise(exercises) {
+    return exercises.length > 0 ? exercises[Math.floor(Math.random() * exercises.length)] : 'No exercise available';
 }

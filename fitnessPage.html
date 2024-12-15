@@ -3,35 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fitness</title>
     <link rel="stylesheet" href="fitness.css">
+    <link rel="stylesheet" href="resets.css">
+    <link rel="icon" href="barbell.png" type="image/png" />
 </head>
 <body>
-    <h1 class="H1">Fitness</h1>
-    <p id="fitnessP">Here you can get recommendations for exercises based on Body Part</p>
-    <!--<p>  or You Can Click <a href="workout.html" id="workoutLink">Here</a> For a Complete Routine</p> <br><br>-->
-    <label id="bodyLabel" class="fitnessLabel">Choose a body part</label><br>
-    <select id="muscleDropdown" class="fitnessDropdown">
-        <option value="none">-Select-</option>
-        <option value="abdominals">Abdominals</option>
-        <option value="abductors">Abductors</option>
-        <option value="adductors">Adductors</option>
-        <option value="biceps">Biceps</option>
-        <option value="calves">Calves</option>
-        <option value="chest">Chest</option>
-        <option value="forearms">Forearms</option>
-        <option value="hamstrings">Hamstrings</option>
-        <option value="middle_back">Back</option>
-        <option value="lats">Lats</option>
-        <option value="glutes">Glutes</option>
-        <option value="quadriceps">Quadriceps</option>
-        <option value="triceps">Triceps</option>
-        <option value="traps">Traps</option>
+    <header style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    position: relative;">
+    
+    <div style="
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 10px;">
+        <a href="index.html" class="buttonlink" id="homeButton" style="text-decoration: none;">
+            <button style="
+                padding: 10px 15px;
+                font-size: 1rem;
+                border: 2px solid black;
+                background-color: rgb(74, 74, 206);
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;">
+                Home
+            </button>
+        </a>
 
-        <option value="shoulder">Shoulders</option>
-    </select><br><br>
-    <a href="fitness.html" id="backLink1">Home</a>
-    <a href="nutrition.html" id="nutritionLink2">Nutrition</a>
+        <a href="nutrition.html" class="buttonlink" id="nutButton" style="text-decoration: none;">
+            <button style="
+                padding: 10px 15px;
+                font-size: 1rem;
+                border: 2px solid black;
+                background-color: rgb(74, 74, 206);
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;">
+                Nutrition
+            </button>
+        </a>
+
+        <button class="buttonlink" id="button1" style="
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 2px solid black;
+            background-color: rgb(74, 74, 206);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <h1 class="H1" style="margin: 0;">Fitness</h1>
+</header>
+ 
+    
+    <p id="fitnessP" style="font-size: 3em;">Here you can get recommendations for exercises based on Body Part or just learn about popular routines</p>
+
+    <label id="bodyLabel" class="fitnessLabel" style="font-size: 2em; max-width: fit-content;">Choose a body part</label><br>
+    <select id="muscleDropdown" class="fitnessDropdown" style="max-width: fit-content; font-size: 1em">
+        <option value="none" class="musclesDropValue">-Select-</option>
+        <option value="abdominals" class="musclesDropValue">Abdominals</option>
+        <option value="abductors" class="musclesDropValue">Abductors</option>
+        <option value="adductors" class="musclesDropValue">Adductors</option>
+        <option value="biceps" class="musclesDropValue">Biceps</option>
+        <option value="calves" class="musclesDropValue">Calves</option>
+        <option value="chest" class="musclesDropValue">Chest</option>
+        <option value="forearms" class="musclesDropValue">Forearms</option>
+        <option value="hamstrings" class="musclesDropValue">Hamstrings</option>
+        <option value="middle_back" class="musclesDropValue">Back</option>
+        <option value="lats" class="musclesDropValue">Lats</option>
+        <option value="glutes" class="musclesDropValue">Glutes</option>
+        <option value="quadriceps" class="musclesDropValue">Quadriceps</option>
+        <option value="triceps" class="musclesDropValue">Triceps</option>
+        <option value="traps" class="musclesDropValue">Traps</option>
+        <option value="shoulder" class="musclesDropValue">Shoulders</option>
+    </select><br><br><br>
 
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,58 +1,448 @@
-.H1{
-    font-size: 5em;
+html {
+    font-family: cursive;
+  }
+  
+  /* Header Text */
+  h1 {
+    font-size: 10em;
+    background: linear-gradient(90deg, blue, white);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Links */
+  #fitnessLink, #nutritionLink {
+    position: fixed;
+    bottom: 0;
+    color: blue;
+    font-size: 1em;
+  }
+  
+  #fitnessLink {
+    left: 0;
+  }
+  
+  #nutritionLink {
+    right: 0;
+  }
+  
+  /* Fitness Paragraph and Labels */
+  #fitnessP {
+    font-size: 2vh;
+  }
+  
+  .fitnessLabel {
+    font-size: 1.25vh;
+  }
+  
+  .fitnessDropdown {
+    font-size: 1vh;
+  }
+  
+  button {
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: rgb(74, 74, 206);
+    color: white;
+    font-family: cursive;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .bodyP{
+    font-size: 3em;
+  }
+  button:hover {
+    background-color: darkgray;
+  }
+  
+  /* Form Container Styling */
+  .formContainer {
+    display: flex;           
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;              
+    max-width: 350px;         
+    margin: 0 auto;           
+    padding: 3em;
+    background-color: white;   /* Default form background */
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Dark Mode Form Styling */
+  body.dark-mode .formContainer {
+    background-color: #333;  /* Change form background in dark mode */
+    color: white;            /* Ensure text inside stays white */
+  }
+  
+  /* Form inside container */
+  .formContainer > form {
+    display: flex;
+    flex-grow: 1;             
+    margin-right: 10px;       
+  }
+  
+  input {
+    width: 100%;             
+    padding: 8px;
+    font-size: 1vh;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Input styling for Dark Mode */
+  body.dark-mode input {
+    background-color: #555;   /* Darker background for inputs */
+    color: white;             /* White text for visibility */
+  }
+  
+  button {
+    padding: 8px;
+    font-size: 1vh;
+    width: 100%;              
+  }
+  
+  #darkModeButton {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #darkModeButton:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  body {
+    background-color: rgb(160, 157, 222);
+    color: black;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+        
+  }
+  
+  header {
+    background-color: rgb(60, 60, 139);
+    color: white;
+    padding: 40px;
     text-align: center;
-    color:ghostwhite;
-    background-color: cornflowerblue;
-}
-#fitnessLink{
-    position: fixed;
-    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  #nutritionImg, #gymImg {
+    width: 50%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  #gymImg {
+    max-height: 50%;
+  }
+  
+  .footer {
+    
+    
+    background-color: rgb(83, 105, 246);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4em;
+    
+  }
+  
+  body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  body.dark-mode header {
+    background-color: #333;
+  }
+  
+  body.dark-mode button {
+    background-color: black;
+    color: white;
+  }
+  
+  body.dark-mode button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  a:visited {
+    color: rgb(214, 29, 214);
+  }
+  
+  a:hover {
+    color: white;
+  }
+  
+  a:active {
+    color: red;
+  }
+  
+  .navBar {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .h3Header{
+    font-size: 4em;
+  }
+  
+  #button1 {
+    height: 50px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1em;
+  }
+  /* Header Styles */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgb(74, 74, 206);
+  }
+  .buttonlink {
+    display: inline-block; /* Makes the link behave like a block element */
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: rgb(17, 17, 206);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 3em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttonlink:hover {
+    background-color: #45a049;
+    cursor: pointer;
+  }
+  
+  .buttonlink:visited{
+    color: white;
+  }
+  #petitionDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #formContainer{
+    width: 50%;
+  }
+  
+  #petForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #petForm input{
+    width: relative;
+    display: flex;  
+  }
+  
+  
+  .modal {
+    display: none; /* hides the modal from view by default*/
+    position: fixed; /* keeps the modal in one place */
+    z-index: 2; /* positions the modal on top of all other elements on the screen */
     left: 0;
-    color: blue;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+    flex-direction: column; /* these flexbox rules center the content on the screen */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* box that contains all the content and images */
+  .modal-content {
+    background-color: lightsteelblue; /* update the colors and font sizes as you like */
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    display: flex; /* adds flexbox to center all items */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #thanks-modal-content {
+    width: 20rem; /* sets a default width for the text container */
+  }
+  
+  #modal-text-container {
+    display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+    flex-direction: column;
+    align-items: center;
+    justify-content:
+     center;
+  }
+  
+  #modalImg{
+    border-radius: 10px;
+    animation: popInOut 2s infinite ease-in-out;
+  }
+  @keyframes popInOut {
+    0%, 100%{
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    75%{
+      transform: scale(0.95);
+      opacity: 1;
+    }
+  }
+  
+  .formContainer{
+    background-color: rgb(74, 74, 206);
+    color: whitesmoke;
+    align-self: center;
+  }
+  .formContainer label{
+    padding: 2px;
+  }
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Visible state: elements become visible and return to their original position */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  }
+  
+  /* General Styles for 4K Resolution */
+  @media screen and (min-width: 3480px) and (min-height: 2160px) {
+    h1 {
+      font-size: 15em; /* Scale up header font size */
+    }
+  
+    #fitnessLink, #nutritionLink {
+      font-size: 1.5em; /* Scale up link font size */
+    }
+  
+    #fitnessP {
+      font-size: 3vh; /* Scale up paragraph font size */
+    }
+  
+    .fitnessLabel {
+      font-size: 2vh;
+    }
+  
+    .fitnessDropdown {
+      font-size: 1.5vh;
+    }
+  
+    button {
+      font-size: 1.5vh;
+    }
+  
+    .bodyP {
+      font-size: 4em; /* Increase body text size */
+    }
+  
+    .formContainer {
+      max-width: 700px; /* Adjust form width */
+      padding: 5em; /* Increase padding for large screens */
+      border-radius: 12px; /* Slightly larger border radius */
+    }
+  
+    input {
+      font-size: 1.5vh; /* Scale input font size */
+    }
+  
+    #darkModeButton {
+      font-size: 1.5rem;
+    }
+  
+    #nutritionImg, #gymImg {
+      width: 40%; /* Adjust image scaling */
+    }
+  
+    .h3Header {
+      font-size: 6em; /* Adjust heading size */
+    }
+  
+    #button1 {
+      height: 70px;
+      font-size: 1.5em;
+    }
+  
+    .buttonlink {
+      font-size: 4em; /* Scale up link buttons */
+    }
+  
+    .modal-content {
+      font-size: 4rem; /* Adjust modal content size */
+    }
+  
+    #thanks-modal-content {
+      width: 30rem; /* Adjust modal width */
+    }
+  
+    .main-header {
+      gap: 20px; /* Add larger gap for 4K screens */
+    }
+  
+    .fitnessLabel{
+      font-size: 5em;
+  
+    }
+  
+    
+  
+    
+  
+    .signatures{
+      font-size: 3em;
+    }
+    .petform{
+      font-size: 3em;
+    }
+  }
+  
+  .musclesDropValue{
     font-size: 1em;
-}
-#nutritionLink{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: blue;
-    font-size: 1em;
-}
-#fitnessP{
-    font-size: 3.5em;
-}
-.fitnessLabel{
-    font-size: 1.25em;
-}
-.fitnessDropdown{
-    font-size: 1em;
-}
-#backLink{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    color: blue;
-    font-size: 1em;  
-}
-#fitnessLink2{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: blue;
-    font-size: 1em; 
-}
-#fitnesslink{
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: blue;
-    font-size: 1em;
-}
-.exercise-name {
-    font-size: 18px; /* Change this value to adjust the size of the exercise name */
-}
-
-.exercise-instructions {
-    font-size: 14px; /* Change this value to adjust the size of the exercise instructions */
-}
+  }
+  
+  #signPlease{
+      font-size: 2em;
+    }
+  
+    #calltoaction{
+      font-size: 1.5em;
+    }
