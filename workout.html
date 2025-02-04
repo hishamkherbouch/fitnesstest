@@ -6,10 +6,9 @@
     <title>Workout Routine Generator</title>
     <link rel="stylesheet" href="fitness.css">
     <link rel="stylesheet" href="reset.css">
-    <!-- Include jQuery for easier DOM manipulation -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Link to your custom JavaScript file -->
     <script src="workout.js"></script>
+
 </head>
 <body>
     <h1>Workout Routine Generator</h1>
@@ -18,6 +17,7 @@
     <form id="workoutForm">
         <label for="daysPerWeek">How many days per week can you work out? (3-6):</label>
         <select id="daysPerWeek" name="daysPerWeek" required>
+            <option value="">Select</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
