@@ -1,6 +1,6 @@
 /* Header Text */
 h1 {
-    font-size: 5em;
+    font-size: 5em; /* Consider using a smaller or responsive font size */
     background: linear-gradient(90deg, blue, white);
     -webkit-background-clip: text;
     color: transparent;
@@ -311,3 +311,68 @@ h1 {
     transform: translateY(0);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
+
+  @media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    #fitnessLink, #nutritionLink {
+        font-size: 0.875em;
+    }
+    #fitnessP {
+        font-size: 1.5em;
+    }
+    .fitnessLabel {
+        font-size: 1em;
+    }
+    .fitnessDropdown {
+        font-size: 1em;
+    }
+    button {
+        font-size: 0.875em;
+    }
+    .bodyP {
+        font-size: 1.25em;
+    }
+    .formContainer {
+        flex-direction: column;
+        padding: 1em;
+    }
+    .formContainer > form {
+        flex-direction: column;
+        width: 100%;
+    }
+    input {
+        font-size: 1em;
+    }
+    #darkModeButton {
+        font-size: 0.875rem;
+    }
+    header {
+        padding: 10px;
+    }
+    section {
+        padding: 5px;
+        margin: 5px;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .h3Header {
+        font-size: 1.5em;
+    }
+    #button1 {
+        font-size: 0.875em;
+    }
+    .buttonlink {
+        font-size: 1em;
+    }
+    .modal-content {
+        font-size: 1.25rem;
+    }
+}
