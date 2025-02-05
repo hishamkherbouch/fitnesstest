@@ -131,5 +131,50 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Link to your JavaScript file -->
     <script src="fitness.js"></script>
+    <script src="workout.js"></script>
+
+    <h1>Workout Routine Generator</h1>
+    
+    <!-- Workout form to gather user input -->
+    <form id="workoutForm">
+        <label for="daysPerWeek">How many days per week can you work out? (3-6):</label>
+        <select id="daysPerWeek" name="daysPerWeek" required>
+            <option value="">Select</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </form>
+
+    <!-- Container to display the generated workout routine -->
+    <div id="routineContainer"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#daysPerWeek').on('change', function() {
+                const daysPerWeek = $(this).val();
+                const routineContainer = $('#routineContainer');
+                routineContainer.empty();
+
+                switch (daysPerWeek) {
+                    case '3':
+                        generateThreeDayRoutine(routineContainer);
+                        break;
+                    case '4':
+                        generateFourDayRoutine(routineContainer);
+                        break;
+                    case '5':
+                        generateFiveDayRoutine(routineContainer);
+                        break;
+                    case '6':
+                        generateSixDayRoutine(routineContainer);
+                        break;
+                    default:
+                        routineContainer.append('<p>Please select a valid number of days.</p>');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
