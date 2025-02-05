@@ -1,58 +1,61 @@
 /* Header Text */
 h1 {
     font-size: 5em; /* Consider using a smaller or responsive font size */
-    background: linear-gradient(90deg, blue, white);
+    background: linear-gradient(90deg, #ff0000, white);
     -webkit-background-clip: text;
     color: transparent;
-  }
-  
-  /* Links */
-  #fitnessLink, #nutritionLink {
+}
+
+/* Links */
+#fitnessLink, #nutritionLink {
     position: fixed;
     bottom: 0;
-    color: blue;
+    color: #ff0000;
     font-size: 0.75em;
-  }
-  
-  #fitnessLink {
+}
+
+#fitnessLink {
     left: 0;
-  }
-  
-  #nutritionLink {
+}
+
+#nutritionLink {
     right: 0;
-  }
-  
-  /* Fitness Paragraph and Labels */
-  #fitnessP {
+}
+
+/* Fitness Paragraph and Labels */
+#fitnessP {
     font-size: 1em;
-  }
-  
-  .fitnessLabel {
+    color: white;
+}
+
+.fitnessLabel {
     font-size: 0.875em;
-  }
-  
-  .fitnessDropdown {
+    color: white;
+}
+
+.fitnessDropdown {
     font-size: 0.75vh;
-  }
-  
-  button {
+}
+
+button {
     border: 1px solid black;
     cursor: pointer;
-    background-color: rgb(74, 74, 206);
+    background-color: #ff0000;
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .bodyP {
+}
+
+.bodyP {
     font-size: 1.5em;
-  }
-  
-  button:hover {
-    background-color: darkgray;
-  }
-  
-  /* Form Container Styling */
-  .formContainer {
+    color: white;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Form Container Styling */
+.formContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,22 +68,22 @@ h1 {
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-  }
-  
-  /* Dark Mode Form Styling */
-  body.dark-mode .formContainer {
+}
+
+/* Dark Mode Form Styling */
+body.dark-mode .formContainer {
     background-color: #333;
     color: white;
-  }
-  
-  /* Form inside container */
-  .formContainer > form {
+}
+
+/* Form inside container */
+.formContainer > form {
     display: flex;
     flex-grow: 1;
     margin-right: 5px;
-  }
-  
-  input {
+}
+
+input {
     width: 100%;
     padding: 4px;
     font-size: 0.75vh;
@@ -88,24 +91,24 @@ h1 {
     color: black;
     border: 1px solid #ccc;
     transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Input styling for Dark Mode */
-  body.dark-mode input {
+}
+
+/* Input styling for Dark Mode */
+body.dark-mode input {
     background-color: #555;
     color: white;
-  }
-  
-  button {
+}
+
+button {
     padding: 4px;
     font-size: 0.75vh;
     width: 100%;
-  }
-  
-  #darkModeButton {
+}
+
+#darkModeButton {
     padding: 4px 7px;
     font-size: 0.75rem;
-    background-color: black;
+    background-color: #ff0000;
     color: white;
     border: none;
     cursor: pointer;
@@ -113,138 +116,139 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  #darkModeButton:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  body {
-    background-color: rgb(160, 157, 222);
-    color: black;
+}
+
+#darkModeButton:hover {
+    background-color: #cc0000;
+    color: white;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
     width: 100%;
-  }
-  
-  header {
-    background-color: rgb(60, 60, 139);
+}
+
+header {
+    background-color: #1a1a1a;
     color: white;
     padding: 20px;
     text-align: center;
     box-sizing: border-box;
     width: 100%;
-  }
-  
-  section {
+}
+
+section {
     padding: 10px;
     margin: 10px;
-  }
-  
-  #nutritionImg, #gymImg {
+}
+
+#nutritionImg, #gymImg {
     width: 25%;
     height: auto;
     padding-top: 25px;
     padding-bottom: 25px;
-  }
-  
-  #gymImg {
+}
+
+#gymImg {
     max-height: 25%;
-  }
-  
-  .footer {
-    background-color: rgb(83, 105, 246);
+}
+
+.footer {
+    background-color: #333333;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 2em;
-  }
-  
-  body.dark-mode {
+}
+
+body.dark-mode {
     background-color: black;
     color: white;
-  }
-  
-  body.dark-mode header {
+}
+
+body.dark-mode header {
     background-color: #333;
-  }
-  
-  body.dark-mode button {
-    background-color: black;
+}
+
+body.dark-mode button {
+    background-color: #ff0000;
     color: white;
-  }
-  
-  body.dark-mode button:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  a:visited {
-    color: rgb(214, 29, 214);
-  }
-  
-  a:hover {
+}
+
+body.dark-mode button:hover {
+    background-color: #cc0000;
     color: white;
-  }
-  
-  a:active {
-    color: red;
-  }
-  
-  .navBar {
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: #ff0000;
+}
+
+.navBar {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-  }
-  
-  .h3Header {
+}
+
+.h3Header {
     font-size: 2em;
-  }
-  
-  #button1 {
+    color: white;
+}
+
+#button1 {
     height: 25px;
     width: auto;
     display: flex;
     align-items: flex-end;
     font-size: 0.5em;
-  }
-  
-  /* Header Styles */
-  .main-header {
+}
+
+/* Header Styles */
+.main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 5px;
     gap: 5px;
-    background-color: rgb(74, 74, 206);
-  }
-  
-  .buttonlink {
+    background-color: #1a1a1a;
+}
+
+.buttonlink {
     display: inline-block;
     padding: 5px 10px;
     margin: 2px;
-    background-color: rgb(17, 17, 206);
+    background-color: #ff0000;
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 3px;
     font-size: 1.5em;
     transition: background-color 0.3s ease;
-  }
-  
-  .buttonlink:hover {
-    background-color: #45a049;
+}
+
+.buttonlink:hover {
+    background-color: #cc0000;
     cursor: pointer;
-  }
-  
-  .buttonlink:visited {
+}
+
+.buttonlink:visited {
     color: white;
-  }
-  
-  .modal {
+}
+
+.modal {
     display: none;
     position: fixed;
     z-index: 2;
@@ -256,17 +260,17 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  #petForm{
+}
+#petForm{
     display: flex;
     flex-direction: column;
-  }
+}
 
-  #petForm input{
+#petForm input{
     width: auto;
-  }
+}
 
-  .modal-content {
+.modal-content {
     background-color: lightsteelblue;
     color: black;
     text-align: center;
@@ -274,45 +278,45 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  #thanks-modal-content {
+}
+
+#thanks-modal-content {
     width: 10rem;
-  }
-  
-  #modalImg {
+}
+
+#modalImg {
     border-radius: 5px;
     animation: popInOut 2s infinite ease-in-out;
-  }
-  
-  @keyframes popInOut {
+}
+
+@keyframes popInOut {
     0%, 100% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
     50% {
-      transform: scale(1.2);
-      opacity: 1;
+        transform: scale(1.2);
+        opacity: 1;
     }
     75% {
-      transform: scale(0.95);
-      opacity: 1;
+        transform: scale(0.95);
+        opacity: 1;
     }
-  }
-  
-  .hidden {
+}
+
+.hidden {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  
-  .visible {
+}
+
+.visible {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 2.5em;
     }
