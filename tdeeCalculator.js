@@ -64,7 +64,15 @@ function handleFormSubmission(event) {
 
 // Event listener for form submission
 if (typeof document !== 'undefined') {
-    document.getElementById('calorieForm').addEventListener('submit', handleFormSubmission);
+    const form = document.getElementById('calorieForm');
+    if (form) {
+        form.addEventListener('submit', handleFormSubmission);
+    }
+}
+
+// Expose calculateTDEE globally when running in the browser
+if (typeof window !== 'undefined') {
+    window.calculateTDEE = calculateTDEE;
 }
 
 if (typeof module !== 'undefined' && module.exports) {
