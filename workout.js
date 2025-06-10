@@ -52,8 +52,9 @@ function generateFourDayRoutine(container) {
     const shoulderExercises = getExercises('shoulder');
 
     container.append('<h2>Day 1: Upper Body</h2>');
-    renderExercise(container, 'Chest Exercise 1: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Chest Exercise 2: ' + getRandomExercise(chestExercises));
+    const [chest1, chest2] = getRandomUniqueExercises(chestExercises, 2);
+    renderExercise(container, 'Chest Exercise 1: ' + chest1);
+    renderExercise(container, 'Chest Exercise 2: ' + chest2);
     renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
     renderExercise(container, 'Shoulder Exercise: ' + getRandomExercise(shoulderExercises));
     renderExercise(container, 'Triceps Exercise: ' + getRandomExercise(tricepsExercises));
@@ -67,8 +68,9 @@ function generateFourDayRoutine(container) {
     const adductorsExercises = getExercises('adductors');
 
     container.append('<h2>Day 2: Lower Body</h2>');
-    renderExercise(container, 'Quadriceps Exercise 1: ' + getRandomExercise(quadricepsExercises));
-    renderExercise(container, 'Quadriceps Exercise 2: ' + getRandomExercise(quadricepsExercises));
+    const [quad1, quad2] = getRandomUniqueExercises(quadricepsExercises, 2);
+    renderExercise(container, 'Quadriceps Exercise 1: ' + quad1);
+    renderExercise(container, 'Quadriceps Exercise 2: ' + quad2);
     renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
     renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
     renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
@@ -89,8 +91,9 @@ function generateFourDayRoutine(container) {
     const abductorsExercises = getExercises('abductors');
 
     container.append('<h2>Day 4: Lower Body</h2>');
-    renderExercise(container, 'Hamstrings Exercise 1: ' + getRandomExercise(hamstringsExercises));
-    renderExercise(container, 'Hamstrings Exercise 2: ' + getRandomExercise(hamstringsExercises));
+    const [ham1, ham2] = getRandomUniqueExercises(hamstringsExercises, 2);
+    renderExercise(container, 'Hamstrings Exercise 1: ' + ham1);
+    renderExercise(container, 'Hamstrings Exercise 2: ' + ham2);
     renderExercise(container, 'Quadriceps Exercise: ' + getRandomExercise(quadricepsExercises));
     renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
     renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
@@ -106,10 +109,12 @@ function generateFiveDayRoutine(container) {
     const tricepsExercises = getExercises('triceps');
 
     container.append('<h2>Day 1: Push</h2>');
-    renderExercise(container, 'Chest Exercise 1: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Chest Exercise 2: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Shoulder Exercise 1: ' + getRandomExercise(shoulderExercises));
-    renderExercise(container, 'Shoulder Exercise 2: ' + getRandomExercise(shoulderExercises));
+    const [chest1, chest2] = getRandomUniqueExercises(chestExercises, 2);
+    const [shoulder1, shoulder2] = getRandomUniqueExercises(shoulderExercises, 2);
+    renderExercise(container, 'Chest Exercise 1: ' + chest1);
+    renderExercise(container, 'Chest Exercise 2: ' + chest2);
+    renderExercise(container, 'Shoulder Exercise 1: ' + shoulder1);
+    renderExercise(container, 'Shoulder Exercise 2: ' + shoulder2);
     renderExercise(container, 'Triceps Exercise: ' + getRandomExercise(tricepsExercises));
 
     // Day 2: Pull (Back, Biceps)
@@ -122,8 +127,9 @@ function generateFiveDayRoutine(container) {
     renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
     renderExercise(container, 'Lats Exercise: ' + getRandomExercise(latsExercises));
     renderExercise(container, 'Traps Exercise: ' + getRandomExercise(trapsExercises));
-    renderExercise(container, 'Biceps Exercise 1: ' + getRandomExercise(bicepsExercises));
-    renderExercise(container, 'Biceps Exercise 2: ' + getRandomExercise(bicepsExercises));
+    const [bi1, bi2] = getRandomUniqueExercises(bicepsExercises, 2);
+    renderExercise(container, 'Biceps Exercise 1: ' + bi1);
+    renderExercise(container, 'Biceps Exercise 2: ' + bi2);
 
     // Day 3: Lower Body
     const quadricepsExercises = getExercises('quadriceps');
@@ -134,8 +140,9 @@ function generateFiveDayRoutine(container) {
     const abductorsExercises = getExercises('abductors');
 
     container.append('<h2>Day 3: Lower Body</h2>');
-    renderExercise(container, 'Quadriceps Exercise 1: ' + getRandomExercise(quadricepsExercises));
-    renderExercise(container, 'Quadriceps Exercise 2: ' + getRandomExercise(quadricepsExercises));
+    const [quad1, quad2] = getRandomUniqueExercises(quadricepsExercises, 2);
+    renderExercise(container, 'Quadriceps Exercise 1: ' + quad1);
+    renderExercise(container, 'Quadriceps Exercise 2: ' + quad2);
     renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
     renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
     renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
@@ -154,8 +161,9 @@ function generateFiveDayRoutine(container) {
 
     // Day 5: Lower Body
     container.append('<h2>Day 5: Lower Body</h2>');
-    renderExercise(container, 'Quadriceps Exercise 1: ' + getRandomExercise(quadricepsExercises));
-    renderExercise(container, 'Quadriceps Exercise 2: ' + getRandomExercise(quadricepsExercises));
+    const [q5_1, q5_2] = getRandomUniqueExercises(quadricepsExercises, 2);
+    renderExercise(container, 'Quadriceps Exercise 1: ' + q5_1);
+    renderExercise(container, 'Quadriceps Exercise 2: ' + q5_2);
     renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
     renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
     renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
@@ -171,10 +179,12 @@ function generateSixDayRoutine(container) {
     const tricepsExercises = getExercises('triceps');
 
     container.append('<h2>Day 1: Push</h2>');
-    renderExercise(container, 'Chest Exercise 1: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Chest Exercise 2: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Shoulder Exercise 1: ' + getRandomExercise(shoulderExercises));
-    renderExercise(container, 'Shoulder Exercise 2: ' + getRandomExercise(shoulderExercises));
+    const [chest1, chest2] = getRandomUniqueExercises(chestExercises, 2);
+    const [shoulder1, shoulder2] = getRandomUniqueExercises(shoulderExercises, 2);
+    renderExercise(container, 'Chest Exercise 1: ' + chest1);
+    renderExercise(container, 'Chest Exercise 2: ' + chest2);
+    renderExercise(container, 'Shoulder Exercise 1: ' + shoulder1);
+    renderExercise(container, 'Shoulder Exercise 2: ' + shoulder2);
     renderExercise(container, 'Triceps Exercise: ' + getRandomExercise(tricepsExercises));
 
     // Day 2: Pull (Back, Biceps)
@@ -187,8 +197,9 @@ function generateSixDayRoutine(container) {
     renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
     renderExercise(container, 'Lats Exercise: ' + getRandomExercise(latsExercises));
     renderExercise(container, 'Traps Exercise: ' + getRandomExercise(trapsExercises));
-    renderExercise(container, 'Biceps Exercise 1: ' + getRandomExercise(bicepsExercises));
-    renderExercise(container, 'Biceps Exercise 2: ' + getRandomExercise(bicepsExercises));
+    const [bi1, bi2] = getRandomUniqueExercises(bicepsExercises, 2);
+    renderExercise(container, 'Biceps Exercise 1: ' + bi1);
+    renderExercise(container, 'Biceps Exercise 2: ' + bi2);
 
     // Day 3: Lower Body
     const quadricepsExercises = getExercises('quadriceps');
@@ -199,8 +210,9 @@ function generateSixDayRoutine(container) {
     const abductorsExercises = getExercises('abductors');
 
     container.append('<h2>Day 3: Lower Body</h2>');
-    renderExercise(container, 'Quadriceps Exercise 1: ' + getRandomExercise(quadricepsExercises));
-    renderExercise(container, 'Quadriceps Exercise 2: ' + getRandomExercise(quadricepsExercises));
+    const [quad1, quad2] = getRandomUniqueExercises(quadricepsExercises, 2);
+    renderExercise(container, 'Quadriceps Exercise 1: ' + quad1);
+    renderExercise(container, 'Quadriceps Exercise 2: ' + quad2);
     renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
     renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
     renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
@@ -208,10 +220,12 @@ function generateSixDayRoutine(container) {
 
     // Day 4: Push (Chest, Shoulders, Triceps)
     container.append('<h2>Day 4: Push</h2>');
-    renderExercise(container, 'Chest Exercise 1: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Chest Exercise 2: ' + getRandomExercise(chestExercises));
-    renderExercise(container, 'Shoulder Exercise 1: ' + getRandomExercise(shoulderExercises));
-    renderExercise(container, 'Shoulder Exercise 2: ' + getRandomExercise(shoulderExercises));
+    const [chest3, chest4] = getRandomUniqueExercises(chestExercises, 2);
+    const [shoulder3, shoulder4] = getRandomUniqueExercises(shoulderExercises, 2);
+    renderExercise(container, 'Chest Exercise 1: ' + chest3);
+    renderExercise(container, 'Chest Exercise 2: ' + chest4);
+    renderExercise(container, 'Shoulder Exercise 1: ' + shoulder3);
+    renderExercise(container, 'Shoulder Exercise 2: ' + shoulder4);
     renderExercise(container, 'Triceps Exercise: ' + getRandomExercise(tricepsExercises));
 
     // Day 5: Pull (Back, Biceps)
@@ -219,13 +233,15 @@ function generateSixDayRoutine(container) {
     renderExercise(container, 'Middle Back Exercise: ' + getRandomExercise(middleBackExercises));
     renderExercise(container, 'Lats Exercise: ' + getRandomExercise(latsExercises));
     renderExercise(container, 'Traps Exercise: ' + getRandomExercise(trapsExercises));
-    renderExercise(container, 'Biceps Exercise 1: ' + getRandomExercise(bicepsExercises));
-    renderExercise(container, 'Biceps Exercise 2: ' + getRandomExercise(bicepsExercises));
+    const [bi3, bi4] = getRandomUniqueExercises(bicepsExercises, 2);
+    renderExercise(container, 'Biceps Exercise 1: ' + bi3);
+    renderExercise(container, 'Biceps Exercise 2: ' + bi4);
 
     // Day 6: Lower Body
     container.append('<h2>Day 6: Lower Body</h2>');
-    renderExercise(container, 'Quadriceps Exercise 1: ' + getRandomExercise(quadricepsExercises));
-    renderExercise(container, 'Quadriceps Exercise 2: ' + getRandomExercise(quadricepsExercises));
+    const [quad3, quad4] = getRandomUniqueExercises(quadricepsExercises, 2);
+    renderExercise(container, 'Quadriceps Exercise 1: ' + quad3);
+    renderExercise(container, 'Quadriceps Exercise 2: ' + quad4);
     renderExercise(container, 'Hamstrings Exercise: ' + getRandomExercise(hamstringsExercises));
     renderExercise(container, 'Calves Exercise: ' + getRandomExercise(calvesExercises));
     renderExercise(container, 'Glutes Exercise: ' + getRandomExercise(glutesExercises));
@@ -240,6 +256,17 @@ function getExercises(muscle) {
 // Helper function to get a random exercise from a list of exercises
 function getRandomExercise(exercises) {
     return exercises.length > 0 ? exercises[Math.floor(Math.random() * exercises.length)] : 'No exercise available';
+}
+
+// Helper function to get multiple unique random exercises from a list
+function getRandomUniqueExercises(exercises, count) {
+    const available = [...exercises];
+    const selected = [];
+    for (let i = 0; i < count && available.length > 0; i++) {
+        const index = Math.floor(Math.random() * available.length);
+        selected.push(available.splice(index, 1)[0]);
+    }
+    return selected;
 }
 
 // Helper function to render an exercise in the container
